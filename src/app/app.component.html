@@ -1,6 +1,14 @@
 <hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+	Start editing to see some magic happen :)
 </p>
 <button (click)="getAppData()">Get App Data</button>
 <button (click)="getVuData()">Get View Data</button>
+<h3>Messages received from AppServer</h3>
+<div *ngFor="let msg of appMessages">
+	<p>received {{msg}}</p>
+</div>
+<h3>Messages received from VuServer</h3>
+<div *ngFor="let msg of vuMessages">
+	<p>received {{msg}}</p>
+</div>
